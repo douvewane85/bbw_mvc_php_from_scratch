@@ -1,0 +1,16 @@
+url 
+ http://xdebug.org/wizard
+copier le cotenu du phpinfo()
+    Instructions
+    Download php_xdebug-3.0.4-8.0-vs16-x86_64.dll
+    Move the downloaded file to \xampp\php\ext
+    Edit C:\xampp\php\php.ini and add the line
+    zend_extension = \xampp\php\ext\php_xdebug-3.0.4-8.0-vs16-x86_64.dll
+    Restart the webserver
+
+php.ini
+[XDebug]
+xdebug.remote.enable=1
+xdebug.remote_autostart=1
+zend_extension = \xampp\php\ext\php_xdebug-3.0.4-8.0-vs16-x86_64.dll
+Installer Extension php debug 
