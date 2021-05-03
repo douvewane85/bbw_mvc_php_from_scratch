@@ -7,9 +7,9 @@
         }
     ],
    "autoload": {
-    "psr-4": {
-        "Bbw\\": "."
-    }
+        "psr-4": {
+            "bbw_mvc\\": "."
+        }
     },
     "require": {}
 }
