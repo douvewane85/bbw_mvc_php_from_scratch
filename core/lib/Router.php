@@ -3,10 +3,12 @@ namespace bbw_mvc\core\lib;
 class Router{
 
       private Request $request;
+      private Response $response;
       private $route=[];
-    function __construct(Request $request)
+    function __construct(Request $request,Response $response)
     { 
       $this->request=$request;
+      $this->response=$response;
      
     }
     /**
@@ -20,8 +22,13 @@ class Router{
          $method=  $this->request->getMethod();
          $callback=$this->route[$method][$path]??false;
          if(!$callback){
-             echo "Page Not Found" ;
+             $this->response->setStatusCode(404);
+             $this->render("erreur/erreur","front");
              exit; 
+         }elseif (is_string($callback)) {
+             $views=$callback;
+              $this->render($views,"front");
+              exit;
          }
          call_user_func( $callback);
     }
@@ -33,7 +40,7 @@ class Router{
      * @param callable $callback
      * @return void
      */
-    public function get(string $path,callable $callback){
+    public function get(string $path, $callback){
         $this->route["get"][$path]=$callback;
     }
 
@@ -45,8 +52,15 @@ class Router{
      * @param callable $callback
      * @return void
      */
-    public function post(string $path,callable $callback){
+    public function post(string $path,$callback){
         $this->route["post"][$path]=$callback;
+    }
+
+    function render($view,$layout=""){
+        ob_start();
+        require_once Application::$ROOT_PATH."/views/$view.html.php";
+        $content_for_layout=ob_get_clean();
+        require_once Application::$ROOT_PATH."/views/layout/$layout.layout.html.php";
     }
     
 }
