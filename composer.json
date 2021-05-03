@@ -1,0 +1,15 @@
+{
+    "name": "user/bbw_mvc_php",
+    "authors": [
+        {
+            "name": "douvewane",
+            "email": "douvewane85@gmail.com"
+        }
+    ],
+   "autoload": {
+    "psr-4": {
+        "Bbw\\": "."
+    }
+    },
+    "require": {}
+}
