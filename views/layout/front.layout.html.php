@@ -9,7 +9,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary ml-1 mr-1">
-      <a class="navbar-brand" href="#">FrameWork MVC By Wane </a>
+      <a class="navbar-brand" href="/catalogue">FrameWork MVC By Wane </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
+            <a class="nav-link" href="/catalogue"
               >Accueil
               <span class="sr-only">(current)</span>
             </a>
@@ -34,7 +34,7 @@
             <a class="nav-link" href="#">Mes Réservations</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Creer un Compte</a>
+            <a class="nav-link" href="/register">Creer un Compte</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -61,7 +61,7 @@
               >
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Mon Profil</a>
-                <a class="dropdown-item" href="#">Se Connecter</a>
+                <a class="dropdown-item" href="/login">Se Connecter</a>
                 <a class="dropdown-item" href="#">Se Deconnecter</a>
               </div>
             </li>
@@ -77,16 +77,8 @@
           culpa eaque ad blanditiis voluptatem. Iste dicta atque quas temporibus
           deserunt!
         </p>
-        <hr class="my-4" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
-          sapiente?
-        </p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button"
-            >Créer un compte</a
-          >
-        </p>
+        
+       
       </div>
     </div>
           <?php echo $content_for_layout; ?>  

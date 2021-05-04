@@ -8,6 +8,8 @@ class Application{
     public Router $router;
     public Request $request;
     public Response $response;
+
+    public static Application $app;
     
    public function __construct(string $ROOT_PATH)
    {
@@ -17,7 +19,9 @@ class Application{
        $this->router=new Router($this->request,$this->response);
        
        //Attributs Statiques
-       self::$ROOT_PATH=$ROOT_PATH;
+         self::$ROOT_PATH=$ROOT_PATH;
+         
+         self::$app=$this;
      
    }
 

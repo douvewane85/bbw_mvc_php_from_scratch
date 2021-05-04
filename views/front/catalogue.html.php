@@ -14,7 +14,7 @@
               <span class="float-left btn btn-sm text-center disabled"
                 >Revervé il y a : 10m</span
               >
-              <a href="#" class="btn btn-sm btn-outline-info float-right ml-3"><i class="fas fa-ellipsis-h">Detail</i></a>
+              <a href="/detail_bien/1" class="btn btn-sm btn-outline-info float-right ml-3"><i class="fas fa-ellipsis-h">Detail</i></a>
               <a href="#" class="btn btn-sm btn-outline-danger float-right"
                 >Annuler</a
               >
